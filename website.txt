@@ -1,0 +1,25 @@
+git init
+git remote add origin https://github.com/AidanHead/AidanHead.github.io.git
+git push -u origin master
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2026 World Cup</title>
+</head>
+<body>
+	<h1>Who will win the 2026 World Cup?</h1>
+	<p>The 2026 World Cup is still in the future, and we cannot predict who will win. However, we can look at the previous winners and make some guesses.</p>
+	<h2>Previous World Cup Winners</h2>
+	<ul>
+		<li>2018: France</li>
+		<li>2014: Germany</li>
+		<li>2010: Spain</li>
+		<li>2006: Italy</li>
+		<li>2002: Brazil</li>
+		<li>1998: France</li>
+		<li>1994: Brazil</li>
+	</ul>
+	<p>As you can see, the winners of the World Cup tend to be the teams with the best players and the best strategies. We'll have to wait and see which teams make it to the 2026 World Cup and which team will emerge as the winner.</p>
+</body>
+</html>
