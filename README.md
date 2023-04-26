@@ -5,9 +5,9 @@
 <body>
 	<nav>
 		<ul>
-			<li><a href="benzema.txt">Benzema</a></li>
-			<li><a href="neymar.txt">Neymar</a></li>
-			<li><a href="website.txt">website</a></li>
+			<li><a href="benzema2.html">Benzema</a></li>
+			<li><a href="neymar2.html">Neymar</a></li>
+			<li><a href="website2.html">website</a></li>
 		</ul>
 	</nav>
 </body>
