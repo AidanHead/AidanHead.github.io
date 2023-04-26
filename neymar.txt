@@ -6,7 +6,7 @@
 <body>
 	<nav>
 		<ul>
-			<li><a href=README.md>Homepage</a></li>
+			<li><a href="README.md">Homepage</a></li>
 		</ul>
 	</nav>
 	<!-- Page content goes here -->
