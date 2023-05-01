@@ -3,7 +3,7 @@
 	<title>Homepage</title>
     <style>
        body {
-           background-color: antiquewhite;
+           background-color: rgb(226, 39, 39);
        } 
     </style>
 </head>
