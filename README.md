@@ -9,6 +9,10 @@
        body li {
             color: rgb(255, 255, 255)
        }
+
+       body a {
+           text-decoration: none;
+       }
        
     </style>
 </head>
