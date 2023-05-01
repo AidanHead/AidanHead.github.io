@@ -1,6 +1,11 @@
 <html>
 <head>
 	<title>Homepage</title>
+    <style>
+       body {
+           background-color: antiquewhite;
+       } 
+    </style>
 </head>
 <body>
 	<nav>
