@@ -5,6 +5,11 @@
        body {
            background-color: rgb(226, 39, 39);
        } 
+
+       body li {
+            color: rgb(255, 255, 255)
+       }
+       
     </style>
 </head>
 <body>
