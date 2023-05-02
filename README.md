@@ -4,6 +4,7 @@
     <style>
        body {
            background-color: rgb(226, 39, 39);
+	    font-size: 18px;
        } 
 
        body li {
