@@ -1,12 +1,120 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Website Title</title>
+	<title>Ping Pong</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<style>
+		/* Your existing CSS styles here */
+
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f7f7f7;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			text-align: center;
+			padding: 20px;
+			color: #333;
+		}
+
+		nav {
+			background-color: #333;
+			padding: 10px 0;
+		}
+
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+
+		nav ul li {
+			display: inline-block;
+			margin: 0 10px;
+		}
+
+		nav ul li a {
+			color: #fff;
+			text-decoration: none;
+			font-size: 16px;
+			padding: 5px 10px;
+		}
+
+		nav ul li a:hover {
+			background-color: #555;
+		}
+	</style>
+	<script>
+		window.addEventListener('DOMContentLoaded', () => {
+			const paddle = document.getElementById('paddle');
+			const ball = document.getElementById('ball');
+			const container = document.getElementById('container');
+			const containerRect = container.getBoundingClientRect();
+
+			let paddleY = containerRect.height / 2 - paddle.offsetHeight / 2;
+			let ballX = containerRect.width / 2 - ball.offsetWidth / 2;
+			let ballY = containerRect.height / 2 - ball.offsetHeight / 2;
+			let dx = 1;
+			let dy = 1;
+
+			function movePaddle(event) {
+				paddleY = event.clientY - containerRect.top - paddle.offsetHeight / 2;
+				if (paddleY < 0) {
+					paddleY = 0;
+				} else if (paddleY + paddle.offsetHeight > containerRect.height) {
+					paddleY = containerRect.height - paddle.offsetHeight;
+				}
+				paddle.style.top = paddleY + 'px';
+			}
+
+			function moveBall() {
+				ballX += dx;
+				ballY += dy;
+
+				if (ballY < 0 || ballY + ball.offsetHeight > containerRect.height) {
+					dy *= -1;
+				}
+
+				if (ballX < 0 || ballX + ball.offsetWidth > containerRect.width) {
+					dx *= -1;
+				}
+
+				const ballRect = ball.getBoundingClientRect();
+				const paddleRect = paddle.getBoundingClientRect();
+
+				if (
+					ballRect.left < paddleRect.right &&
+					ballRect.right > paddleRect.left &&
+					ballRect.top < paddleRect.bottom &&
+					ballRect.bottom > paddleRect.top
+				) {
+					dx *= -1;
+				}
+
+				ball.style.left = ballX + 'px';
+				ball.style.top = ballY + 'px';
+			}
+
+			document.addEventListener('mousemove', movePaddle);
+
+			setInterval(moveBall, 5);
+		});
+	</script>
 </head>
 <body>
-	<h1>Thor</h1>
-	<li><a href="README.html">homepage</a></li>
+	<h1>Ping Pong</h1>
+	<nav>
+		<ul>
+			<li><a href="README.html">Homepage</a></li>
+		</ul>
+	</nav>
+	<div id="container" style="position: relative; height: 400px; width: 800px; border: 1px solid;">
+		<div id="paddle" style="position: absolute; top: 0; left: 0; width: 10px; height: 80px; background-color: #333;"></div>
+		<div id="ball" style="position: absolute; top: 0; left: 0; width: 20px; height: 20px; background-color: #333; border-radius: 50%;"></div>
+	</div>
 </body>
 </html>
